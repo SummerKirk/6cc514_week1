@@ -72,6 +72,7 @@ cons_writeline:
     # ah to $0x0e in case it's changed itself oooooor
     call cons_write                 # write already exists to handle variable length strings that are stored in the adress that si points to
     call cons_write_crlf             # caqll line feed. this exists so it isn't method order dependant
+    ret                         # ret needed here
 # end of w1 additions
 
 boot_message:                  # Definition of our boot message 
